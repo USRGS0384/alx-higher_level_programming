@@ -3,4 +3,4 @@
 
 
 number = 3.14159
-print("float:{number:.2f}".format(number))
+print("float:{number:.2f}")

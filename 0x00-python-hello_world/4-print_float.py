@@ -1,3 +1,6 @@
 #!/bin/python3
+# Author - Philip Ajuong Deng
+
+
 number = 3.14159
-print("float:{:.2f}".format(number))
+print("float:{number:.2f}".format(number))

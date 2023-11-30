@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 # Author - Philip Ajuong Deng
 
-"""write a function that import results from the file the maths calculations."""
-
 from calculator_1 import add, sub, mul, div
 
 if __name__ == "__main__":

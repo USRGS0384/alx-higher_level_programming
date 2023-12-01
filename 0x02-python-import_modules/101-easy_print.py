@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import easy_print_python
+import programming_is_so_good

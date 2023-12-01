@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-# Author - Philip Ajuong Deng
-import fast_alphabet_103
+import string
+print(string.fast_alphabet_103)

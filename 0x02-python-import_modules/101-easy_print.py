@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import printforme
+import easy_print_python

@@ -5,9 +5,9 @@ def replace_in_list(my_list, idx, element):
 
     if idx < 0 or idx > (len(my_list) - 1):
         return my_list
-els:
+else:
     my_list[idx] = element
     return my_list
 
 if _name_ == "_name_":
-    replace_in_list(my_list, idx, element)_
+    replace_in_list(my_list, idx, element)

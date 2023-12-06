@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import primt_pythoniscool_for me
+import exec("#pythoniscool\n")

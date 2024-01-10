@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <wchar.h>
+#include <locate.h>
 #include <Python.h>
+#include <unicodeobject.h>
 
 /**
  * print_python_string - Function that prints strings in Python

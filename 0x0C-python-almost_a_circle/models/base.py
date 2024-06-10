@@ -159,7 +159,7 @@ class Base:
         turt.pensize(3)
         turt.shape("turtle")
 
-        turt.color("FF4500")
+        turt.color("#FF4500")
         for rect in list_rectangles:
             turt.showturtle()
             turt.up()
@@ -172,7 +172,7 @@ class Base:
                 turt.left(90)
             turt.hideturtle()
 
-        turt.color("#00FFFF")
+        turt.color("#0000CD")
         for sq in list_squares:
             turt.showturtle()
             turt.up()

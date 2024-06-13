@@ -2,16 +2,16 @@
 """Defines unittests for models/rectangle.py.
 
 Unittest classes:
-    TestRectangle_instantiation - line 25
-    TestRectangle_width - line 114
-    TestRectangle_height - line 190
-    TestRectangle_x - line 262
-    TestRectangle_y - line 334
-    TestRectangle_order_of_initialization - line 402
-    TestRectangle_area - line 430
-    TestRectangle_update_args - line 538
-    TestRectangle_update_kwargs - line 676
-    TestRectangle_to_dictionary - line 788
+    TestRectangle_instantiation - line 23
+    TestRectangle_width - line 112
+    TestRectangle_height - line 188
+    TestRectangle_x - line 260
+    TestRectangle_y - line 332
+    TestRectangle_order_of_initialization - line 400
+    TestRectangle_area - line 428
+    TestRectangle_update_args - line 536
+    TestRectangle_update_kwargs - line 674
+    TestRectangle_to_dictionary - line 786
 """
 import io
 import sys
@@ -70,10 +70,11 @@ class TestRectangle_instantiation(unittest.TestCase):
 
     def test_y_private(self):
         with self.assertRaises(AttributeError):
-            print(Rectangle(5, 5, 0, 0, 1).__y
-                        def test_width_getter(self):
+            print(Rectangle(5, 5, 0, 0, 1).__y)
+
+    def test_width_getter(self):
         r = Rectangle(5, 7, 7, 5, 1)
-        self.assertEqual(5, r.width):
+        self.assertEqual(5, r.width)
 
     def test_width_setter(self):
         r = Rectangle(5, 7, 7, 5, 1)
@@ -157,8 +158,7 @@ class TestRectangle_width(unittest.TestCase):
 
     def test_bytes_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(b'Python', 2))
-
+            Rectangle(b'Python', 2)
 
     def test_bytearray_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -300,7 +300,7 @@ class TestRectangle_x(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(1, 2, frozenset({1, 2, 3, 1}))
 
-             def test_range_x(self):
+    def test_range_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(1, 2, range(5))
 
@@ -335,6 +335,7 @@ class TestRectangle_y(unittest.TestCase):
     def test_None_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Rectangle(1, 2, 3, None)
+
     def test_str_y(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Rectangle(1, 2, 1, "invalid")
@@ -453,7 +454,6 @@ class TestRectangle_stdout(unittest.TestCase):
     @staticmethod
     def capture_stdout(rect, method):
         """Captures and returns text printed to stdout.
-
 
         Args:
             rect (Rectangle): The Rectangle to print to stdout.

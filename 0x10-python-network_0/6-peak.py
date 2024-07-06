@@ -1,24 +1,28 @@
 #!/usr/bin/python3
-"""Finds a peak in a list of unsorted integers"""
-
 
 def find_peak(list_of_integers):
-    """Finds a peak in list_of_integers"""
+    """
+    Finds a peak element in a list of unsorted integers.
+    """
 
-    if list_of_integers is None or list_of_integers == []:
-        return None
-    lo = 0
-    hi = len(list_of_integers)
-    mid = ((hi - lo) // 2) + lo
-    mid = int(mid)
-    if hi == 1:
+    Args:
+        list_of_integers (list[int]): The input list of integers.
+
+    Returns:
+        int: The peak element (an element greater than its neighbors).
+    n = len(list_of_integers)
+    if n == 1:
         return list_of_integers[0]
-    if hi == 2:
-        return max(list_of_integers)
-    if list_of_integers[mid] >= list_of_integers[mid - 1] and\
-            list_of_integers[mid] >= list_of_integers[mid + 1]:
-        return list_of_integers[mid]
-    if mid > 0 and list_of_integers[mid] < list_of_integers[mid + 1]:
-        return find_peak(list_of_integers[mid:])
-    if mid > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
-        return find_peak(list_of_integers[:mid])
+
+    # Check the first and last elements
+    if list_of_integers[0] >= list_of_integers[1]:
+        return list_of_integers[0]
+    if list_of_integers[n - 1] >= list_of_integers[n - 2]:
+        return list_of_integers[n - 1]
+
+    # Traverse the array to find the peak
+    for i in range(1, n - 1):
+        if list_of_integers[i] >= list_of_integers[i - 1] and list_of_integers[i] >= list_of_integers[i + 1]:
+            return list_of_integers[i]
+
+print("Peak element:", find_peak(arr))
